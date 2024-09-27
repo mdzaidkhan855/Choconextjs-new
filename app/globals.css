@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+  }
+}
+
+
+
+/*   The code starts here */
+.nav{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(66, 9, 9);
+  border-bottom: 1px solid black;
+}
+.nav img{
+  width: 100px;
+  height: 100px;
+}
+
+.nav .nav-right{
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+  color: white;
+}
+
+/* Hero  */
+.hero {
+  background: #000 url('/images/header-background-1.jpg') center center/cover
+    no-repeat;
+  /* padding: 11.5rem 2rem 8rem; */
+  border: 2px solid yellow;
+}
+
+.hero__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.hero__content {
+  max-width: 500px;
+}
+
+.hero__title {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 1.2;
+  color: white;
+}
+
+.hero__title--primary {
+  color: #08c0dd;
+}
+
+.hero__description {
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: white;
+}
+
+.hero__image video {
+  max-width: 500px;
+  height: 500px;
+  
+}
+
+/* product card section */
+
+
+@media (min-width: 600px){
+  .nav{
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .nav img{
+    width:100px ;
+    height:70px;
+  }
+}
+.nav .navlinks{
+  color: red;
+}
