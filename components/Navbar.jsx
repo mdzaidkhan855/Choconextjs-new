@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { Provider } from "react-redux";
+import store from "@/cart/store";
 
 const Navbar = () => {
   return (
@@ -20,6 +22,11 @@ const Navbar = () => {
           </Link>
 
           <li>contact</li>
+          <li>
+            <Provider store={store}>
+              <CartNotification />
+            </Provider>
+          </li>
         </ul>
       </div>
     </div>
