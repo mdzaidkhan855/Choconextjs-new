@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Provider } from "react-redux";
 import store from "@/cart/store";
+import CartNotification from "./cartbadge/CartNotification";
 
 const Navbar = () => {
   return (
